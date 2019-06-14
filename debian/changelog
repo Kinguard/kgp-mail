@@ -1,3 +1,9 @@
+kgp-mail (1.0~test4) vili; urgency=medium
+
+  * Initial add of dovecot support
+
+ -- Tor Krill <tor@openproducts.se>  Fri, 14 Jun 2019 15:35:39 +0200
+
 kgp-mail (1.0~test3) vili; urgency=medium
 
   * Fix typo in postinst

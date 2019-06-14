@@ -1,2 +1,9 @@
-conf/main.cf	/etc/kinguard/conf/
-conf/master.cf	/etc/kinguard/conf/
+conf/main.cf			/etc/kinguard/conf/
+conf/master.cf			/etc/kinguard/conf/
+services/postfix.service	/etc/systemd/system/
+services/postfix@.service	/etc/systemd/system/
+
+
+conf/99-kgp.conf		/etc/dovecot/conf.d/
+conf/opi-dict-auth.conf		/etc/dovecot/
+services/dovecot.service	/etc/systemd/system/
