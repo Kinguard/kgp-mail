@@ -1,0 +1,61 @@
+# See /usr/share/postfix/main.cf.dist for a commented, more complete version
+
+smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
+biff = no
+
+# appending .domain is the MUA's job.
+append_dot_mydomain = no
+
+# Uncomment the next line to generate "delayed mail" warnings
+#delay_warning_time = 4h
+
+readme_directory = no
+
+# TLS parameters
+smtpd_tls_cert_file=/etc/opi/opi.cert
+smtpd_tls_key_file=/etc/opi/dnspriv.pem
+smtpd_tls_security_level=may
+smtp_tls_security_level = may
+smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
+smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
+
+# SASL client, smtp, configuration
+relayhost =
+smtp_sasl_auth_enable = no
+smtp_sasl_password_maps = hash:/var/opi/mail/conf/sasl_passwd
+smtp_sasl_security_options = noanonymous, noplaintext
+smtp_sasl_tls_security_options = noanonymous
+
+# SASL server, smtpd,  configuration
+smtpd_sasl_type = dovecot
+smtpd_sasl_path = private/auth
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_security_options = noanonymous
+smtpd_tls_auth_only = yes
+
+#Only ever allow sasl authenticated
+smtpd_relay_restrictions =
+  permit_sasl_authenticated
+  reject_unauth_destination
+
+# virtual mailbox setup
+virtual_mailbox_domains = localdomain /var/opi/mail/conf/domains
+virtual_mailbox_base = /var/opi/mail/data/
+virtual_mailbox_maps = hash:/var/opi/mail/conf/vmailbox hash:/var/opi/mail/conf/localmail
+virtual_minimum_uid = 100
+virtual_uid_maps = static:5000
+virtual_gid_maps = static:5000
+virtual_alias_maps = regexp:/var/opi/mail/conf/virtual
+
+myhostname = keep.unknown
+alias_maps = hash:/etc/aliases
+alias_database = hash:/etc/aliases
+myorigin = /etc/mailname
+mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
+mailbox_size_limit = 0
+recipient_delimiter = +
+inet_interfaces = all
+inet_protocols = all
+virtual_mailbox_limit = 54525952
+message_size_limit = 52428800
+

@@ -1,0 +1,16 @@
+Source: kgp-mail
+Section: devel
+Priority: optional
+Maintainer: Tor Krill <tor@openproducts.se>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 3.9.8
+Homepage: https://www.kinguardproject.org
+#Vcs-Git: https://anonscm.debian.org/git/collab-maint/kgp-mail.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/kgp-mail.git
+
+Package: kgp-mail
+Architecture: all
+Depends: ${misc:Depends}, postfix
+Description: virtual mail package for the KGP project 
+ kgp-mail provides dependencies and setup of the current
+ mail components used by the kgp-project.

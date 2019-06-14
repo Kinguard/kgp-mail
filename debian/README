@@ -1,0 +1,8 @@
+The Debian Package kgp-mail
+----------------------------
+
+This package provides dependencies and adaptations on a default mail
+components for the KGP project. (Currently postfix, dovecot and 
+fetchmail)
+
+ -- Tor Krill <tor@openproducts.se>  Thu, 14 Jun 2019 07:30:12 +0200
