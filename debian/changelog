@@ -1,3 +1,34 @@
+kgp-mail (1.0~test10) vili; urgency=medium
+
+  * More typos
+
+ -- Tor Krill <tor@openproducts.se>  Mon, 24 Jun 2019 17:11:16 +0200
+
+kgp-mail (1.0~test9) vili; urgency=medium
+
+  * Fix typo in preinst
+
+ -- Tor Krill <tor@openproducts.se>  Mon, 24 Jun 2019 16:58:09 +0200
+
+kgp-mail (1.0~test8) vili; urgency=medium
+
+  * Add debug to preinst script
+
+ -- Tor Krill <tor@openproducts.se>  Mon, 24 Jun 2019 16:49:27 +0200
+
+kgp-mail (1.0~test7) vili; urgency=medium
+
+  * Move possible unmasking to preinst making sure we dont have any
+    masked services.
+
+ -- Tor Krill <tor@openproducts.se>  Mon, 24 Jun 2019 16:30:51 +0200
+
+kgp-mail (1.0~test6) vili; urgency=medium
+
+  * Unmask services upon package removal
+
+ -- Tor Krill <tor@openproducts.se>  Mon, 24 Jun 2019 16:04:18 +0200
+
 kgp-mail (1.0~test5) vili; urgency=medium
 
   * Initial add of fetchmail support
