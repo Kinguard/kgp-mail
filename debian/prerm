@@ -40,6 +40,10 @@ case "$1" in
 	remove)
 		undivert kgp-mail /etc/postfix/main.cf /etc/postfix/main.cf-kgp-dist false
 		undivert kgp-mail /etc/postfix/master.cf /etc/postfix/master.cf-kgp-dist postfix
+
+		undivert kgp-mail /etc/default/fetchmail /etc/default/fetchmail.kgp-dist false
+		usermod --home /var/lib/fetchmail fetchmail
+		undivert kgp-mail  /etc/init.d/fetchmail /etc/init.d/fetchmail.kgp-dist fetchmail
 	;;
 	
 	failed-upgrade)

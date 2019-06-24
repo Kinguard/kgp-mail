@@ -62,6 +62,19 @@ case "$1" in
 		divert kgp-mail /etc/postfix/main.cf /etc/postfix/main.cf-kgp-dist /etc/kinguard/conf/main.cf false
 		divert kgp-mail /etc/postfix/master.cf /etc/postfix/master.cf-kgp-dist /etc/kinguard/conf/master.cf postfix
 
+		divert kgp-mail /etc/default/fetchmail /etc/default/fetchmail.kgp-dist /etc/kinguard/conf/fetchmail.default false
+		divert kgp-mail /etc/init.d/fetchmail /etc/init.d/fetchmail.kgp-dist /etc/kinguard/conf/fetchmail.init fetchmail
+
+		# Fixups for fetchmail
+		if ! [ -d /var/opi/fetchmail ]
+		then
+			 mkdir -p /var/opi/fetchmail
+		fi
+
+		chmod 700 /var/opi/fetchmail
+		chown -h -R fetchmail:nogroup /var/opi/fetchmail
+		usermod --home /var/opi/fetchmail fetchmail
+
 		#Disable services that should not run by default
 		for service in dovecot postfix
 		do

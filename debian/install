@@ -1,9 +1,14 @@
+# Postfix files
 conf/main.cf			/etc/kinguard/conf/
 conf/master.cf			/etc/kinguard/conf/
 services/postfix.service	/etc/systemd/system/
 services/postfix@.service	/etc/systemd/system/
 
-
+# dovecot files
 conf/99-kgp.conf		/etc/dovecot/conf.d/
 conf/opi-dict-auth.conf		/etc/dovecot/
 services/dovecot.service	/etc/systemd/system/
+
+# fetchmail files
+conf/fetchmail.default		/etc/kinguard/conf/
+conf/fetchmail.init		/etc/kinguard/conf/
