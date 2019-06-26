@@ -59,13 +59,23 @@ divert() {
 
 case "$1" in
 	configure)
+		# Postfix
 		divert kgp-mail /etc/postfix/main.cf /etc/postfix/main.cf-kgp-dist /etc/kinguard/conf/main.cf false
 		divert kgp-mail /etc/postfix/master.cf /etc/postfix/master.cf-kgp-dist /etc/kinguard/conf/master.cf postfix
 
+		if [ -d /var/opi/mail/data ]
+		then
+			chown 5000:5000 /var/opi/mail/data
+			chown postfix:postfix /var/opi/mail/conf
+			chmod 0770 /var/opi/mail/data
+		fi
+
+
+		# Fetchmail
 		divert kgp-mail /etc/default/fetchmail /etc/default/fetchmail.kgp-dist /etc/kinguard/conf/fetchmail.default false
 		divert kgp-mail /etc/init.d/fetchmail /etc/init.d/fetchmail.kgp-dist /etc/kinguard/conf/fetchmail.init fetchmail
 
-		# Fixups for fetchmail
+		# Fixups
 		if ! [ -d /var/opi/fetchmail ]
 		then
 			 mkdir -p /var/opi/fetchmail
