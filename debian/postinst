@@ -71,6 +71,10 @@ case "$1" in
 		fi
 
 		# Make sure we have a compiled aliases file
+		if [ ! -e /etc/mailname ]
+		then
+			echo "tempname.kinguardproject.org" > /etc/mailname
+		fi
 		/usr/bin/newaliases
 
 		# Fetchmail

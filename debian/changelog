@@ -1,3 +1,9 @@
+kgp-mail (1.0~test14) vili; urgency=medium
+
+  * Also make sure we have a system mailname
+
+ -- Tor Krill <tor@openproducts.se>  Wed, 18 Sep 2019 11:02:31 +0200
+
 kgp-mail (1.0~test13) vili; urgency=medium
 
   * Run newaliases to make sure we have a compiled aliases db
