@@ -70,6 +70,8 @@ case "$1" in
 			chmod 0770 /var/opi/mail/data
 		fi
 
+		# Make sure we have a compiled aliases file
+		/usr/bin/newaliases
 
 		# Fetchmail
 		divert kgp-mail /etc/default/fetchmail /etc/default/fetchmail.kgp-dist /etc/kinguard/conf/fetchmail.default false
