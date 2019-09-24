@@ -1,3 +1,9 @@
+kgp-mail (1.0~test15) vili; urgency=medium
+
+  * Remove hostname from mydestinations since we have that in virtual
+
+ -- Tor Krill <tor@openproducts.se>  Tue, 24 Sep 2019 14:58:44 +0200
+
 kgp-mail (1.0~test14) vili; urgency=medium
 
   * Also make sure we have a system mailname

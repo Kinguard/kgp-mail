@@ -48,6 +48,7 @@ virtual_gid_maps = static:5000
 virtual_alias_maps = regexp:/var/opi/mail/conf/virtual
 
 myhostname = keep.unknown
+mydestination = localhost.$mydomain, localhost
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
 myorigin = /etc/mailname
