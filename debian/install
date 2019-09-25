@@ -5,6 +5,7 @@ services/postfix.service	/etc/systemd/system/
 services/postfix@.service	/etc/systemd/system/
 
 # dovecot files
+conf/05-kgp.conf		/etc/dovecot/conf.d/
 conf/99-kgp.conf		/etc/dovecot/conf.d/
 conf/opi-dict-auth.conf		/etc/dovecot/
 services/dovecot.service	/etc/systemd/system/
