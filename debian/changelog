@@ -1,3 +1,9 @@
+kgp-mail (1.0~test17) vili; urgency=medium
+
+  * Add dovecot dist upgrade fixup script
+
+ -- Tor Krill <tor@openproducts.se>  Tue, 08 Oct 2019 09:34:57 +0200
+
 kgp-mail (1.0~test16) vili; urgency=medium
 
   * Try disable dovecot pam authentication

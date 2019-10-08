@@ -10,7 +10,11 @@ Homepage: https://www.kinguardproject.org
 
 Package: kgp-mail
 Architecture: all
-Depends: ${misc:Depends}, postfix, dovecot-imapd, fetchmail
+Depends: ${misc:Depends},
+	postfix,
+	dovecot-imapd,
+	fetchmail,
+	opi-updates
 Description: virtual mail package for the KGP project 
  kgp-mail provides dependencies and setup of the current
  mail components used by the kgp-project.
