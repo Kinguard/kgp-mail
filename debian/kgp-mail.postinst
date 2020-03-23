@@ -60,8 +60,8 @@ divert() {
 case "$1" in
 	configure)
 		# Postfix
-		divert kgp-mail /etc/postfix/main.cf /etc/postfix/main.cf-kgp-dist /etc/kinguard/conf/main.cf false
-		divert kgp-mail /etc/postfix/master.cf /etc/postfix/master.cf-kgp-dist /etc/kinguard/conf/master.cf postfix
+		divert kgp-mail /etc/postfix/main.cf /etc/postfix/main.cf-kgp-dist /etc/kinguard/divert/kgp-mail/postfix/main.cf false
+		divert kgp-mail /etc/postfix/master.cf /etc/postfix/master.cf-kgp-dist /etc/kinguard/divert/kgp-mail/postfix/master.cf postfix
 
 		if [ -d /var/opi/mail/data ]
 		then
@@ -78,8 +78,8 @@ case "$1" in
 		/usr/bin/newaliases
 
 		# Fetchmail
-		divert kgp-mail /etc/default/fetchmail /etc/default/fetchmail.kgp-dist /etc/kinguard/conf/fetchmail.default false
-		divert kgp-mail /etc/init.d/fetchmail /etc/init.d/fetchmail.kgp-dist /etc/kinguard/conf/fetchmail.init fetchmail
+		divert kgp-mail /etc/default/fetchmail /etc/default/fetchmail.kgp-dist /etc/kinguard/divert/kgp-mail/fetchmail/fetchmail.default false
+		divert kgp-mail /etc/init.d/fetchmail /etc/init.d/fetchmail.kgp-dist /etc/kinguard/divert/kgp-mail/fetchmail/fetchmail.init fetchmail
 
 		# Fixups
 		if ! [ -d /var/opi/fetchmail ]

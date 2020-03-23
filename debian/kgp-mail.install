@@ -1,6 +1,6 @@
 # Postfix files
-conf/main.cf			/etc/kinguard/conf/
-conf/master.cf			/etc/kinguard/conf/
+conf/main.cf			/etc/kinguard/divert/kgp-mail/postfix/
+conf/master.cf			/etc/kinguard/divert/kgp-mail/postfix/
 services/postfix.service	/etc/systemd/system/
 services/postfix@.service	/etc/systemd/system/
 
@@ -12,5 +12,5 @@ services/dovecot.service	/etc/systemd/system/
 scripts/dovecot-migrate		/usr/share/kgp-mail/scripts/
 
 # fetchmail files
-conf/fetchmail.default		/etc/kinguard/conf/
-conf/fetchmail.init		/etc/kinguard/conf/
+conf/fetchmail.default		/etc/kinguard/divert/kgp-mail/fetchmail/
+conf/fetchmail.init		/etc/kinguard/divert/kgp-mail/fetchmail/
