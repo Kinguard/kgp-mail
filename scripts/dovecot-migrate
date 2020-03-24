@@ -5,19 +5,21 @@
 # unusable dovecot, no dh-params.
 # This script tries to makes sure we run the new package provided version
 
+. $1/utils.sh
+
 CFILE="/etc/dovecot/conf.d/10-ssl.conf"
 
-echo "Check for faulty dovecot ssl config"
+log_debug "Check for faulty dovecot ssl config"
 
 if [ -e "${CFILE}.ucf-dist" ]
 then
-	echo "Found stale ssl config file"
+	log_info "Found stale ssl config file"
 	if [ -e "${CFILE}" ]
 	then
-		echo "Saving original ssl config"
+		log_info "Saving original ssl config"
 		mv "${CFILE}" "${CFILE}.kgp-update"
 	fi
-	echo "Update with new version"
+	log_info "Update with new version"
 	mv "${CFILE}.ucf-dist" "${CFILE}"
 
 	systemctl reload dovecot.service
