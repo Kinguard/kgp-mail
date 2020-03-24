@@ -1,3 +1,9 @@
+kgp-mail (1.0~test19) vili; urgency=medium
+
+  * Update logging in migrate script
+
+ -- Tor Krill <tor@openproducts.se>  Tue, 24 Mar 2020 10:16:43 +0100
+
 kgp-mail (1.0~test18) vili; urgency=medium
 
   * Move dovecot migrate script to a symlink into destination
