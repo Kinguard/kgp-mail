@@ -12,8 +12,8 @@ append_dot_mydomain = no
 readme_directory = no
 
 # TLS parameters
-smtpd_tls_cert_file=/etc/opi/opi.cert
-smtpd_tls_key_file=/etc/opi/dnspriv.pem
+smtpd_tls_cert_file=/etc/opi/web_cert.pem
+smtpd_tls_key_file=/etc/opi/web_key.pem
 smtpd_tls_security_level=may
 smtp_tls_security_level = may
 smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache

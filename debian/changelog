@@ -1,3 +1,9 @@
+kgp-mail (1.0~test20) vili; urgency=medium
+
+  * Update postfix server certs to use web cert
+
+ -- Tor Krill <tor@openproducts.se>  Mon, 06 Jul 2020 15:58:38 +0200
+
 kgp-mail (1.0~test19) vili; urgency=medium
 
   * Update logging in migrate script
