@@ -1,3 +1,9 @@
+kgp-mail (1.0~test21) vili; urgency=medium
+
+  * Update dovecot migrate script to use kgp-bashlibrary
+
+ -- Tor Krill <tor@openproducts.se>  Tue, 29 Jun 2021 16:02:00 +0200
+
 kgp-mail (1.0~test20) vili; urgency=medium
 
   * Update postfix server certs to use web cert
