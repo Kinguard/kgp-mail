@@ -5,7 +5,8 @@
 # unusable dovecot, no dh-params.
 # This script tries to makes sure we run the new package provided version
 
-. $1/utils.sh
+LOGNAME="${LOGNAME}: Dovecot migrate"
+source /usr/share/kgp-bashlibrary/scripts/kgp-logging.sh
 
 CFILE="/etc/dovecot/conf.d/10-ssl.conf"
 
